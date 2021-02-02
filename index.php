@@ -6,11 +6,12 @@
  * 3. Déployez sur votre serveur et testez !
  */
 
-$from = '';
+/*$from = '';
 $to = '';
 $message = 'Hello World, sending a simple mail !';
 // TODO Votre code ici.
-
+$header = array("from" => $from);
+mail($to,"first mail from exo",$message,$header);*/
 
 /**
  * 4. Commentez le code précédent, mais gardez les variables $from et $to
@@ -24,3 +25,4 @@ $message = 'Hello World, sending a simple mail !';
  *     N'écrasez pas les valeurs déjà existantes ( s'il y en a ).
  */
 // TODO Votre code ici.
+
