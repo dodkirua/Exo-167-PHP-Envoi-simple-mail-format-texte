@@ -40,6 +40,7 @@ if (mail($mailTo,$sujet,$message2,$header2)){
     echo "<p>Le message a bien été envoyé. Merci !</p>";
     $file = fopen("mail.txt","a+b");
     fwrite($file,$message2."|".$mailTo."\r\n");
+    fclose($file);
 
 }
 else {
