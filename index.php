@@ -25,4 +25,23 @@ mail($to,"first mail from exo",$message,$header);*/
  *     N'écrasez pas les valeurs déjà existantes ( s'il y en a ).
  */
 // TODO Votre code ici.
+$mail = "";
+$mailTo = "";
+$message2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut dolore in iure nam nesciunt porro rem saepe soluta, totam ut voluptatibus? Autem dolorum eligendi quae quos suscipit tempora temporibus.";
+$sujet = "Mail part3";
+$message3 = wordwrap($message2,70,"\r\n");
+$header2 = array(
+    "from" => $mail,
+    "Reply-To" => $mail,
+    "X-Mailer" => 'PHP/' . phpversion()
+);
 
+if (mail($mailTo,$sujet,$message2,$header2)){
+    echo "<p>Le message a bien été envoyé. Merci !</p>";
+    $file = fopen("mail.txt","a+b");
+    fwrite($file,$message2."|".$mailTo."\r\n");
+
+}
+else {
+    echo "<p>Une erreur est survenue lors de l'envoi du mail</p>";
+}
